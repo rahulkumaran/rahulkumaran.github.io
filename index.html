@@ -1,116 +1,370 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Visit My World</title>
-<style>
-h1,h3,.list{
-	color: orange;
-}
-h4,center{
-	color: cyan;
-}
-a{
-	color: green;
-}
-.button {
-	background-color: white; 
-	border: none;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	margin: 4px 2px;
-	cursor: pointer;
-	border-radius: 9px;
-}
-.button{
-	font-size : 30px;
-	color : black
-}
-.about_me{
-	font-size : 25px;
-}
-div.gallery img {
-    width: 100%;
-    height: auto;
-}
-div.desc {
-    padding: 15px;
-    text-align: center;
-}
-div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 1000px;
-}
-.projects,.kwoc,.contact_me{
-	padding: 15px;
-	font-size: 15px;
-}
-.extra,.project_desc,.Utlyz-CLI,.Encrypt,.Attendance-Manager,.Robo,.kwoc_desc,.contact_desc{
-	font-size: 25px;
-}
-div.thanks{
-	font-size: 40px;
-	color: skyblue;
-	text-align: center;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Arulkumaran</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fafafa;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin-top: 48px;
+        }
+
+        .two-column section {
+            margin: 0;
+        }
+
+        .two-column h2 {
+            margin-top: 0;
+        }
+
+        @media (max-width: 700px) {
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .two-column h2 {
+                margin-top: 48px;
+            }
+        }
+
+        a {
+            color: #1a1a1a;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        a:hover {
+            opacity: 0.6;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #666;
+            margin-top: 48px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: #444;
+            margin-bottom: 12px;
+        }
+
+        .intro {
+            margin-bottom: 24px;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+
+        .header-content {
+            display: flex;
+            gap: 32px;
+            align-items: flex-start;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 500px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .links {
+                justify-content: center;
+            }
+        }
+
+        .item {
+            margin-bottom: 24px;
+        }
+
+        .item h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .meta {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 4px;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .highlight {
+            font-size: 0.9rem;
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+
+        .memberships-list, .awards-list {
+            list-style: none;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .memberships-list li, .awards-list li {
+            margin-bottom: 8px;
+        }
+
+        .year {
+            color: #888;
+            font-size: 0.8rem;
+        }
+
+        footer {
+            margin-top: 64px;
+            padding-top: 24px;
+            border-top: 1px solid #eee;
+            font-size: 0.875rem;
+            color: #888;
+        }
+    </style>
 </head>
-<body bgcolor="black">
-	<font color="white">
+<body>
+    <header>
+        <div class="header-content">
+            <img src="Rahul.png" alt="Rahul Arulkumaran" class="profile-photo">
+            <div class="header-text">
+                <h1>Rahul Arulkumaran</h1>
+                <p class="intro">
+                    I've been building software since I was 19. In 2018, I created coding agents to convert pseudocode to C code and headless browsers to access Facebook, comics, and news from the terminal, long before these became mainstream. After 8+ years building automation systems for HR, Accounting, and Finance, I realized they always broke because tech teams didn't understand end-to-end business processes. That's why I'm building <a href="https://trybrowzer.com" target="_blank">Browzer</a>.
+                </p>
+                <div class="links">
+                    <a href="mailto:rahul@trybrowzer.com">Email</a>
+                    <a href="https://github.com/rahulkumaran" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/rahul-arulkumaran" target="_blank">LinkedIn</a>
+                    <a href="https://scholar.google.com/citations?user=nES7KiwAAAAJ&hl=en" target="_blank">Scholar</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<!==================================================================ABOUT ME SECTION CODE STARTS=========================================================>
+    <div class="two-column">
+        <section>
+            <h2>Startups</h2>
 
-		<h1 align="center">HEY THERE! WELCOME TO MY WORLD!</h1>
-		<center>
-			<a href="index.html/#about_me"><button type="button" class="button">About Me</button></a>
-			<a href="projects.html"><button type="button" class="button">My Projects</button></a>
-			<a href="competitive.html"><button type="button" class="button">Competitive</button></a>
-			<a href="index.html/#contact_me"><button type="button" class="button">Contact Me</button></a>
-		</center>
-		<br/>
-		<div class="gallery"><a name="about_me"></a>
-  			 <img src="Images/1.jpg" alt="Rahul Arulkumaran" width="700" height="500">
- 			 <div class="desc"><strong>Yes, that's me!</strong></div>
-		</div>
-		<br/><br/><br/>
-		<div name="about_me" class="about_me">
-			<p>
-				<h3> A Small Introduction To Myself </h3>
-				Hey Guys! I'm Rahul Arulkumaran, a student who's pursuing his major in Computer Science Engineering in Mahindra Ecole Centrale, Hyderabad.
-				I'm currently in my 2<sup>nd</sup> year of engineering.<br/><br/>
-				I love to create things that make life easier. Actually, wait a minute! I like making things that makes my life easier.<br/><br/> 
-				I love coding and I'm really good with Python, C and C++. I love dancing, playing cricket,
-				hanging out with friends and sleeping! I'm an Open Source enthusiast.<br/><br/>
-				Who doesn't love sleeping? Haha! Jokes apart!<br/><br/>
-				But mind you, I'm NOT LAZY! I'm a good observer and a fast learner. I grasp things easily.<br/>
-			</p>
-		</div><br/><br/><br/><br/><br/>
+            <div class="item">
+                <h3>Browzer</h3>
+                <p class="meta">Founder &middot; Oct 2025 - Present</p>
+                <p class="description">AI-powered browser automation that lets anyone record workflows with a single click, no drag-and-drop required.</p>
+            </div>
 
-<!==================================================================ABOUT ME SECTION CODE ENDS=========================================================>
+            <div class="item">
+                <h3>NFTGarage</h3>
+                <p class="meta">Founder &middot; 2022</p>
+                <p class="description">NFT Launchpad, $500k revenue in 6 months. First to create financial NFTs for DeFi and composable GameFi features.</p>
+            </div>
 
-<!==================================================================CONTACT ME SECTION CODE STARTS=========================================================>
-		<div class="contact_me" name="contact_me">
-			<a name="contact_me"><h1>Contact Me</h1></a>
-			<div class="contact_desc">
-				Connect with me on:
-				<center>
-					| <a href="rahulkumaran313@gmail.com">Gmail </a>
-					| <a href="https://www.facebook.com/rahularulkumaran">Facebook </a>
-					| <a href="https://github.com/rahulkumaran">GitHub </a>
-					| <a href="https://www.linkedin.com/in/rahul-arulkumaran/">LinkedIn </a>
-					| <a href="https://twitter.com/RahulKumaran4">Twitter </a>
-					| <a href="https://t.me/rahulkumaran">Telegram </a>|
-				</center>
-			</div>
-		</div>
-<!==================================================================CONTACT ME SECTION CODE ENDS=========================================================>
+            <div class="item">
+                <h3>Widhya</h3>
+                <p class="meta">Co-Founder, CEO &middot; 2018 - 2021</p>
+                <p class="description">Gamified e-learning platform. Grew 600 to 15k users in 6 months. 70% job placement. $2k MRR.</p>
+            </div>
+        </section>
 
-		<p>
-			<div class="thanks"><strong><i>Thank You for visiting my blog!</i></strong></div>
-			<br/><br/><br/>
-		</p>
-	</font>
+        <section>
+            <h2>Work Experience</h2>
+
+            <div class="item">
+                <h3>AI Engineering Manager</h3>
+                <p class="meta">Yuma &middot; Jan 2025 - Sep 2025</p>
+                <p class="description">Built trading systems for Bittensor subnets.</p>
+            </div>
+
+            <div class="item">
+                <h3>AI Fellow & Data Engineer</h3>
+                <p class="meta">Foundry (DCG) &middot; May 2022 - Jan 2025</p>
+                <p class="description">S&P 500 prediction on BitTensor. 10+ TB crypto ETL pipelines.</p>
+            </div>
+
+            <div class="item">
+                <h3>Technical Reviewer</h3>
+                <p class="meta">O'Reilly Media &middot; 2023 - 2024</p>
+                <p class="description">Reviewed AI/ML books and publications.</p>
+            </div>
+
+            <div class="item">
+                <h3>Data Science Intern</h3>
+                <p class="meta">GenY Labs &middot; 2019</p>
+                <p class="description">Built features for Auris product.</p>
+            </div>
+
+            <div class="item">
+                <h3>Undergraduate Researcher</h3>
+                <p class="meta">Mahindra Ecole Centrale &middot; 2018 - 2019</p>
+                <p class="description">Analyzed 100M+ Twitter accounts for radicalization research.</p>
+            </div>
+
+            <div class="item">
+                <h3>ML Intern</h3>
+                <p class="meta">Verzeo &middot; 2018</p>
+                <p class="description">Built and trained ML models.</p>
+            </div>
+
+            <div class="item">
+                <h3>Growth Data Analyst</h3>
+                <p class="meta">MCaffeine &middot; 2016 - 2017</p>
+                <p class="description">Analyzed e-commerce data across Amazon, Flipkart.</p>
+            </div>
+        </section>
+    </div>
+
+    <section>
+        <h2>Research</h2>
+        <p class="description" style="margin-bottom: 20px;">
+            Published 40+ papers in AI, Data & Blockchain with 1000+ citations. Reviewer for AI papers at ICLR and books at O'Reilly Publications.
+        </p>
+
+        <div class="item">
+            <h3><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nES7KiwAAAAJ&citation_for_view=nES7KiwAAAAJ:u5HHmVD_uO8C" target="_blank">Understanding User Vulnerability Towards Radicalization on Twitter</a></h3>
+            <p class="meta">IC2S2 &middot; 2019</p>
+            <p class="description">Analyzed 100M+ Twitter accounts to understand radicalization patterns.</p>
+        </div>
+
+        <div class="item">
+            <h3><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nES7KiwAAAAJ&citation_for_view=nES7KiwAAAAJ:YsMSGLbcyi4C" target="_blank">Analyzing Information Asymmetry in Financial Markets Using Machine Learning</a></h3>
+            <p class="meta">IJPREM &middot; 2021 &middot; 80 citations</p>
+        </div>
+
+        <div class="item">
+            <h3><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nES7KiwAAAAJ&citation_for_view=nES7KiwAAAAJ:BqipwSGYUEgC" target="_blank">Implementing Data Quality and Metadata Management for Large Enterprises</a></h3>
+            <p class="meta">IJRAR &middot; 2020 &middot; 62 citations</p>
+        </div>
+
+        <div class="item">
+            <h3><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=nES7KiwAAAAJ&citation_for_view=nES7KiwAAAAJ:IjCSPb-OGe4C" target="_blank">AI-Driven Optimization of Proof-of-Stake Blockchain Validators</a></h3>
+            <p class="meta">Innovative Research Thoughts &middot; 2023 &middot; 18 citations</p>
+        </div>
+
+        <div class="item">
+            <h3><a href="https://ieeexplore.ieee.org/abstract/document/9242866" target="_blank">Real Time Predictions of Adverse Digressions in Critical and Noisy Industrial Processes Using LSTMs</a></h3>
+            <p class="meta">IEEE Xplore &middot; 2020</p>
+        </div>
+
+        <div class="item">
+            <h3>Patent: A Method of Recognizing Speech and Hand Gesture in Real Time</h3>
+            <p class="meta">India &middot; Application No. 202021034347</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Memberships</h2>
+        <ul class="memberships-list">
+            <li>Founder In Residence, Founders, Inc. <span class="year">2026</span></li>
+            <li>Member - AI & Crypto, Forbes Technology Council <span class="year">2025 - 2026</span></li>
+            <li>OnDeck Fellow (ODF'26) <span class="year">2025</span></li>
+            <li>AI Frontier Network <span class="year">2024 - 2025</span></li>
+            <li>Python Software Foundation <span class="year">2018 - Present</span></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+
+        <div class="item">
+            <h3>University at Buffalo</h3>
+            <p class="meta">M.S. in Data Science &middot; 2021 - 2022</p>
+            <p class="description">Research Assistant @ Blockchain ThinkLab</p>
+        </div>
+
+        <div class="item">
+            <h3>Mahindra University</h3>
+            <p class="meta">B.Tech in Computer Science &middot; 2016 - 2020</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Hackathons</h2>
+        <ul class="awards-list">
+            <li>Smart India Hackathon - Winner <span class="year">2019</span> <span class="description">- Largest hackathon (200k participants)</span></li>
+            <li>ETH San Francisco - Winner <span class="year">2022</span> <span class="description">- Dune & Polygon bounties</span></li>
+            <li>Foundry Hackathon - Winner <span class="year">2021</span></li>
+            <li>Foundry Hackathon - Runner Up <span class="year">2022</span></li>
+            <li>UBHacking - Winner <span class="year">2021</span> <span class="description">- Best Crypto Hack</span></li>
+            <li>FOSSASIA OpenTechNight - Winner</li>
+            <li>OpenCode - 2nd <span class="year">2018</span></li>
+            <li>Data Science Hackathon (JNTU-Hyd) - 5th</li>
+            <li>KWoC - Completed <span class="year">2018</span></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Awards</h2>
+        <ul class="awards-list">
+            <li>International Achievers' Award <span class="year">2023</span></li>
+            <li>Karmaveer Chakra Awardee</li>
+            <li>Global Young Leaders Fellow</li>
+            <li>Facebook Secure & Private AI Scholar <span class="year">2019</span></li>
+            <li>Microsoft Technology Associate</li>
+            <li>21 Under 21 - Girlscript India <span class="year">2018</span></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Press</h2>
+        <p class="description">
+            <a href="https://forbes.ge/en/ai-and-blockchain-how-a-decentralized-expert-envisions-their-integration/" target="_blank">Forbes</a> &middot;
+            <a href="https://www.outlookindia.com/hub4business/the-story-of-an-ai-pioneer-in-digital-vigilance-and-social-network-analysis" target="_blank">Outlook India</a> &middot;
+            <a href="https://www.india.com/business/decentralized-ai-the-future-of-intelligence-development-and-the-visionary-rahul-arulkumaran-leading-the-charge-7431607/" target="_blank">India.com</a> &middot;
+            <a href="https://www.dnaindia.com/technology/report-advancing-boundaries-in-industrial-process-optimization-rahul-arulkumaran-s-transformative-research-3120066" target="_blank">DNA India</a> &middot;
+            <a href="https://africa.businessinsider.com/local/markets/international-achiever-rahul-arulkumaran-combines-ai-and-blockchain-systems/v9v2dky" target="_blank">Business Insider</a> &middot;
+            <a href="https://guardian.ng/news/rising-star-in-artificial-intelligence-shapes-the-future-of-decentralized-ai-protocols/" target="_blank">The Guardian</a> &middot;
+            <a href="https://news24online.com/information/breaking-barriers-in-economic-theory-rahuls-contributions-to-information-asymmetry-in-financial-markets/405943/" target="_blank">News24</a> &middot;
+            <a href="https://www.edexlive.com/campus/e-learning-portal-widhya-promises-to-transform-the-industry-with-its-micro-tasks-and-internships-10739.html" target="_blank">Edex Live</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>I use coding tools to write most of my code, but I've built my own harnesses for Claude Code & Cursor to manage context and memory over long-running tasks.</p>
+        <p style="margin-top: 12px;">&copy; 2026 Rahul Arulkumaran</p>
+    </footer>
 </body>
 </html>
